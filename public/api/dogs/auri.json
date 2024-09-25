@@ -1,0 +1,20 @@
+{
+  "data": {
+    "type": "dog",
+    "id": 2,
+    "attributes": {
+      "name": "Auri",
+      "gender": "Female",
+      "breed": "Poodle",
+      "birthday": "01/01/2021",
+      "weight": 10,
+      "image": "https://petlandbradenton.com/wp-content/uploads/2023/03/2110211_800-600x450.jpg",
+      "ownerName": "Patrick Rothfuss",
+      "ownerPhoneNumber": "512-234-8753",
+      "favoriteToy": "squirrel sqeaker",
+      "microchipID": "000134",
+      "vaccinesUpToDate": false,
+      "spayedNeutered": true
+    }
+  }
+}

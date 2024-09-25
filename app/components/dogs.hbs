@@ -1,0 +1,14 @@
+<div class="dogs">
+  <form>
+    <label>
+      <span>Search for dog</span>
+      <input class="light">
+    </label>
+  </form>
+
+  <ul class="results">
+    {{#each @dogs as |dog|}}z
+      <li><Dog @dog={{dog}} /></li>
+    {{/each}}
+  </ul>
+</div>

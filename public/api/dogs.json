@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+    "type": "dog",
+    "id": 1,
+    "attributes": {
+      "name": "Kaladin",
+      "gender": "Male",
+      "breed": "Doberman Pinscher",
+      "birthday": "09/21/2020",
+      "weight": 80,
+      "image": "https://preview.redd.it/j2u52niuvb121.jpg?width=640&crop=smart&auto=webp&s=0f5beff3701e947b90d61727de95575bc2dff3ce",
+      "ownerName": "Annastasia Black",
+      "ownerPhoneNumber": "205-370-7971",
+      "favoriteToy": "Bone",
+      "microchipID": "00000123",
+      "vaccinesUpToDate": true,
+      "spayedNeutered": true
+      }
+    },
+    {
+      "type": "dog",
+      "id": 2,
+      "attributes": {
+        "name": "Auri",
+        "gender": "Female",
+        "breed": "Poodle",
+        "birthday": "01/01/2021",
+        "weight": 10,
+        "image": "https://petlandbradenton.com/wp-content/uploads/2023/03/2110211_800-600x450.jpg",
+        "ownerName": "Patrick Rothfuss",
+        "ownerPhoneNumber": "512-234-8753",
+        "favoriteToy": "squirrel sqeaker",
+        "microchipID": "000134",
+        "vaccinesUpToDate": false,
+        "spayedNeutered": true
+      }
+    },
+    {
+      "type": "dog",
+      "id": 3,
+      "attributes": {
+      "name": "Mustang",
+      "gender": "Female",
+      "breed": "German Shepard",
+      "birthday": "11/04/2018",
+      "weight": 60,
+      "image": "https://image.petmd.com/files/inline-images/german-shepherd-3.jpg?VersionId=QrldSoaj4srcfCInIahiKcoLSh5D0gh8",
+      "ownerName": "Pierce Brown",
+      "ownerPhoneNumber": "720-980-3452",
+      "favoriteToy": "spaceship",
+      "microchipID": "000532",
+      "vaccinesUpToDate": true,
+      "spayedNeutered": false
+      }
+    }
+  ]
+}

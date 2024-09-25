@@ -1,0 +1,20 @@
+{
+  "data": {
+    "type": "dog",
+    "id": 1,
+    "attributes": {
+    "name": "Kaladin",
+    "gender": "Male",
+    "breed": "Doberman Pinscher",
+    "birthday": "09/21/2020",
+    "weight": 80,
+    "image": "https://preview.redd.it/j2u52niuvb121.jpg?width=640&crop=smart&auto=webp&s=0f5beff3701e947b90d61727de95575bc2dff3ce",
+    "ownerName": "Annastasia Black",
+    "ownerPhoneNumber": "205-370-7971",
+    "favoriteToy": "Bone",
+    "microchipID": "00000123",
+    "vaccinesUpToDate": true,
+    "spayedNeutered": true
+    }
+  }
+}

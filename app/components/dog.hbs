@@ -1,0 +1,13 @@
+<article class="dog">
+    <Dog::Image src={{@dog.image}} alt="A picture of {{@dog.name}}" />
+    <div class="details">
+        <h3>
+            <LinkTo @route="dog" @model={{@dog}}>
+                {{@dog.name}}
+            </LinkTo>
+        </h3>
+        <div class="detail breed">
+            {{@dog.breed}}
+        </div>
+    </div>
+</article>

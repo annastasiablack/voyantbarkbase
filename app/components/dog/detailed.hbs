@@ -1,0 +1,40 @@
+<article class="dog detailed">
+
+
+    <Dog::Image src={{@dog.image}} alt="A picture of {{@dog.title}}" />
+
+
+
+    <div class="details">
+        <h3>{{@dog.name}}</h3>
+        <p>Gender: {{@dog.gender}}</p>
+        <p>Age: {{age @dog.birthday}}</p>
+        <p>Birthay: {{@dog.birthday}}</p>
+        <p>Weight: {{@dog.weight}}</p>
+        <p>Favorite Toy: {{@dog.favoriteToy}}</p>
+
+        <div class="detail owner">
+            <span>Owner:</span> {{@dog.ownerName}} <br>
+            <span>Phone Number:</span> {{@dog.ownerPhoneNumber}}
+        </div>
+        <div class="detail medical">
+            <span>Microship ID:</span> {{@dog.microchipID}}
+        </div>
+        <div class="detail vaccine">
+            <span>Vacinations Up To Date:</span> {{@dog.vaccinesUpToDate}}
+        </div>
+        <div class="detail spayNeutar">
+            <span>Spayed/Neutered:</span> {{@dog.spayedNeutered}}
+        </div>
+        <div>
+            <BsButton @type="primary" {{on "click" this.toggleEdit}}>
+                Edit
+            </BsButton>
+            <BsButton @type="danger {{on "click" this.deleteDog}}">
+                Delete
+            </BsButton>
+        </div>
+    </div>
+
+
+</article>
