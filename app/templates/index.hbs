@@ -3,6 +3,7 @@
     <p>sort</p>
     <p>filter</p>
     {{!-- <LinkTo @route="add-dog" class="button">Add Dog</LinkTo> --}}
+    <LinkTo @route="dogs.new" class="button">Create New Dog</LinkTo>
 </Jumbo>
 
-<Dogs @dogs="{{@model}}" />
+<Dogs @dogs={{@model}} />

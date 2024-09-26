@@ -1,0 +1,47 @@
+<form {{on "submit" this.submitForm}}>
+  <label>
+    Name:
+    <Input @value={{@dog.name}} />
+  </label>
+  <label>
+    Breed:
+    <Input @value={{@dog.breed}} />
+  </label>
+  <label>
+    Gender:
+    <Input @value={{@dog.gender}} />
+  </label>
+  <label>
+    Birthday:
+    <Input @value={{@dog.birthday}} />
+  </label>
+  <label>
+    Weight:
+    <Input @value={{@dog.weight}} type="number" />
+  </label>
+  <label>
+    Favorite Toy:
+    <Input @value={{@dog.favoriteToy}} />
+  </label>
+  <label>
+    Owner:
+    <Input @value={{@dog.owner}} />
+  </label>
+  <label>
+    Owner Phone Number:
+    <Input @value={{@dog.ownerPhoneNumber}} />
+  </label>
+  <label>
+    Microchip ID:
+    <Input @value={{@dog.microchipID}} />
+  </label>
+  <label>
+    Vaccinations Up To Date:
+    <Input @value={{@dog.vaccinesUpToDate}} />
+  </label>
+  <label>
+    Spayed/Neutered:
+    <Input @value={{@dog.spayedNeutered}} />
+  </label>
+  <button type="submit">{{@buttonText}}</button>
+</form>

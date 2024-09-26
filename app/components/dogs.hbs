@@ -1,14 +1,18 @@
 <div class="dogs">
-  <form>
+  <form {{on "input" this.updateQuery}} {{on "submit" this.handleSubmit}}>
     <label>
       <span>Search for dog</span>
-      <input class="light">
+      <input name="dog-search-term" class="light">
     </label>
+    <p>The results below will update as you type.</p>
+    <p>{{this.query}}</p>
   </form>
 
   <ul class="results">
-    {{#each @dogs as |dog|}}z
-      <li><Dog @dog={{dog}} /></li>
-    {{/each}}
+    <Dogs::Filter @dogs={{@dogs}} @query={{this.query}} as |results|>
+      {{#each results as |dog|}}
+        <li><Dog @dog={{dog}} /></li>
+      {{/each}}
+    </Dogs::Filter>
   </ul>
 </div>

@@ -20,7 +20,7 @@
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "start": "ember serve",
+    "start": "concurrently \"ember serve\" \"node server.js\"",
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
     "test:ember": "ember test"
   },
@@ -64,6 +64,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-qunit": "^8.1.1",
+    "json-server": "^1.0.0-beta.3",
     "loader.js": "^4.7.0",
     "prettier": "^3.3.3",
     "qunit": "^2.22.0",

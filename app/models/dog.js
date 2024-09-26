@@ -1,6 +1,5 @@
 import Model, { attr } from '@ember-data/model';
 
-
 export default class DogModel extends Model {
   @attr name;
   @attr gender;
@@ -14,4 +13,9 @@ export default class DogModel extends Model {
   @attr microchipID;
   @attr vaccinesUpToDate;
   @attr spayedNeutered;
+
+  // update
+  set type(value) {
+    this.name = value;
+  }
 }
