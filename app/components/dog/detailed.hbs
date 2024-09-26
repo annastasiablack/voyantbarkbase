@@ -6,7 +6,7 @@
     <div class="details">
         {{#if this.toggleEdit}}
         <h3>
-            <Input @type="text" @value={{@dog.name}} {{on "input" (this.updateName @dog)}} />
+            <Input @type="text" @value={{@dog.name}} {{on "input" (fn this.updateName @dog)}} />
         </h3>
         <p>Gender: <Input @type="text" @value={{@dog.gender}} {{on "input" (this.updategender @dog)}} /></p>
         <p>Age: {{age @dog.birthday}}</p>
@@ -69,9 +69,9 @@
             <button type="button" {{on "click" this.toggleEditMode}}>
                 {{if this.toggleEdit "Save" "Edit"}}
             </button>
-            <BsButton @type="danger" {{on " click" this.deleteDog}}>
+            {{!-- <BsButton @type="danger" {{on " click" this.deleteDog}}>
                 Delete
-            </BsButton>
+            </BsButton> --}}
         </div>
     </div>
 
