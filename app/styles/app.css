@@ -22,8 +22,7 @@ div,
 span,
 a,
 button {
-  font-family: Lato, "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial,
-    sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -83,7 +82,7 @@ p {
 
 .menu {
   height: 4em;
-  background-color: #e46855;
+  background-color: #191970;
 }
 
 .menu h1 {
@@ -91,7 +90,6 @@ p {
   padding: 5px 0 0 8px;
   color: #f9f9f9;
   font-size: 1.8em;
-  font-style: italic;
 }
 
 .menu a,
@@ -120,6 +118,7 @@ p {
   position: relative;
   bottom: 5px;
 }
+
 
 .dogs label span {
   font-size: 140%;

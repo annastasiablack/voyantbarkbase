@@ -35,4 +35,14 @@ export default class DogDetailsComponent extends Component {
   toggleEditMode() {
     this.toggleEdit = !this.toggleEdit;
   }
+
+  @action
+  async saveDog(event) {
+    event.preventDefault();
+    try {
+      await this.args.dog.save();
+    } catch (error) {
+      console.error('Error saving dog:', error);
+    }
+  }
 }

@@ -4,9 +4,9 @@ export default class DogsFilter extends Component {
   get results() {
     let { dogs, query } = this.args;
 
-    //todo : make not case sensitive & search breed, owner, microchip
+    //todo : search breed, owner, microchip
     if (query) {
-      dogs = dogs.filter((dog) => dog.name.includes(query));
+      dogs = dogs.filter((dog) => dog.name.toLowerCase().includes(query.toLowerCase()));
     }
 
     return dogs;

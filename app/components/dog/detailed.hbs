@@ -4,6 +4,7 @@
     <Dog::Image src={{@dog.image}} alt="A picture of {{@dog.title}}" />
 
     <div class="details">
+        <form {{on "submit" this.saveDog}}>
         {{#if this.toggleEdit}}
         <h3>
             <Input @type="text" @value={{@dog.name}} {{on "input" (this.updateName @dog)}} />
@@ -73,6 +74,7 @@
                 Delete
             </BsButton>
         </div>
+        </form>
     </div>
 
 

@@ -10,6 +10,9 @@ export default class DogRoute extends Route {
     );
     return content.data;
   }
+  model(params) {
+    return this.store.findRecord('dog', params.dog_id);
+  }
 }
 
 //   async model(params) {
