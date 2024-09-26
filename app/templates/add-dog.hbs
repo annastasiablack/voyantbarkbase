@@ -1,6 +1,57 @@
-<Jumbo>
-  <h2>Add Dog</h2>
-  <p>
-    ...
-  </p>
-</Jumbo>
+<h2>Add a New Dog</h2>
+
+<form {{on "submit" this.saveDog}}>
+  <div>
+    <label for="name">Name:</label>
+    <Input @type="text" @value={{this.name}} id="name" />
+  </div>
+  <div>
+    <label for="age">Gender:</label>
+    <Input @type="gender" @value={{this.gender}} id="gender" />
+  </div>
+  <div>
+    <label for="breed">Breed:</label>
+    <Input @type="text" @value={{this.breed}} id="breed" />
+  </div>
+  <div>
+    <label for="birthday">birthday:</label>
+    <Input @type="text" @value={{this.birthday}} id="birthday" />
+  </div>
+  <div>
+    <label for="weight">weight:</label>
+    <Input @type="number" @value={{this.weight}} id="weight" />
+  </div>
+  <div>
+    <label for="image">image url:</label>
+    <Input @type="text" @value={{this.image}} id="image" />
+  </div>
+  <div>
+    <label for="ownerName">ownername:</label>
+    <Input @type="text" @value={{this.ownerName}} id="ownerName" />
+  </div>
+   <div>
+    <label for="ownerPhoneNumber">ownerPhoneNumber:</label>
+    <Input @type="text" @value={{this.ownerPhoneNumber}} id="ownerPhoneNumber" />
+  </div>
+  <div>
+    <label for="favoriteToy">favoriteToy:</label>
+    <Input @type="text" @value={{this.favoriteToy}} id="favoriteToy" />
+  </div>
+  <div>
+    <label for="microchipID">microchipID:</label>
+    <Input @type="text" @value={{this.microchipID}} id="microchipID" />
+  </div>
+  <div>
+    <label for="vaccinesUpToDate">vaccinesUpToDate:</label>
+    <Input @type="boolean" @value={{this.vaccinesUpToDate}} id="vaccinesUpToDate" />
+  </div>
+  <div>
+    <label for="spayedNeutered">spayedNeutered:</label>
+    <Input @type="boolean" @value={{this.spayedNeutered}} id="spayedNeutered" />
+  </div>
+  {{!-- <div>
+    <label for="image">Image URL:</label>
+    <Input @type="text" @value={{this.image}} id="image" />
+  </div> --}}
+  <button type="submit">Add Dog</button>
+</form>

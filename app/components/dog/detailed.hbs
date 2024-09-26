@@ -3,13 +3,48 @@
 
     <Dog::Image src={{@dog.image}} alt="A picture of {{@dog.title}}" />
 
-
-
     <div class="details">
+        {{#if this.toggleEdit}}
+        <h3>
+            <Input @type="text" @value={{@dog.name}} {{on "input" (this.updateName @dog)}} />
+        </h3>
+        <p>Gender: <Input @type="text" @value={{@dog.gender}} {{on "input" (this.updategender @dog)}} /></p>
+        <p>Age: {{age @dog.birthday}}</p>
+        <p>
+            Birthday:
+            <Input @type="date" @value={{@dog.birthday}} {{on "input" (this.updateBirthday @dog)}} />
+        </p>
+
+        <p>Weight: 
+            <Input @type="text" @value={{@dog.weight}} {{on "input" (this.updateWeight @dog)}} />
+        </p>
+        <p>Favorite Toy:
+            <Input @type="text" @value={{@dog.favoriteToy}} {{on "input" (this.updateFavoriteToy @dog)}} />
+        </p>
+
+        <div class="detail owner">
+            <span>Owner:</span> 
+                <Input @type="text" @value={{@dog.ownerName}} {{on "input" (this.updateOwnerName @dog)}} />
+            <br>
+            <span>Phone Number:</span> 
+                <Input @type="text" @value={{@dog.ownerPhoneNumber}} {{on "input" (this.updateOwnerPhoneNumber @dog)}} />
+        </div>
+        <div class="detail medical">
+            <span>Microship ID:</span> 
+                <Input @type="text" @value={{@dog.microchipID}} {{on "input" (this.updateMicrochipID @dog)}} />
+        </div>
+        <div class="detail vaccine">
+            <span>Vacinations Up To Date:</span> {{@dog.vaccinesUpToDate}}
+        </div>
+        <div class="detail spayNeutar">
+            <span>Spayed/Neutered:</span> {{@dog.spayedNeutered}}
+        </div>
+        {{!-- if edit mode --}}
+        {{else}}
         <h3>{{@dog.name}}</h3>
         <p>Gender: {{@dog.gender}}</p>
         <p>Age: {{age @dog.birthday}}</p>
-        <p>Birthay: {{@dog.birthday}}</p>
+        <p>Birthday: {{@dog.birthday}}</p>
         <p>Weight: {{@dog.weight}}</p>
         <p>Favorite Toy: {{@dog.favoriteToy}}</p>
 
@@ -26,11 +61,15 @@
         <div class="detail spayNeutar">
             <span>Spayed/Neutered:</span> {{@dog.spayedNeutered}}
         </div>
+        {{/if}}
+
+
+
         <div>
-            <BsButton @type="primary" {{on "click" this.toggleEdit}}>
-                Edit
-            </BsButton>
-            <BsButton @type="danger {{on "click" this.deleteDog}}">
+            <button type="button" {{on "click" this.toggleEditMode}}>
+                {{if this.toggleEdit "Save" "Edit"}}
+            </button>
+            <BsButton @type="danger" {{on " click" this.deleteDog}}>
                 Delete
             </BsButton>
         </div>
