@@ -20,7 +20,7 @@
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "start": "ember serve",
+    "start": "ember serve --proxy http://localhost:4200",
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
     "test:ember": "ember test"
   },
@@ -81,6 +81,8 @@
     "edition": "octane"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
     "moment": "^2.30.1"
   }
 }

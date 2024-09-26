@@ -21,33 +21,43 @@ export default class AddDogController extends Controller {
 
   @action
   async saveDog(event) {
+    console.log('Event:', event);
     event.preventDefault();
-    
     try {
-      // Fetch all existing dogs to determine the next id
-      const dogs = await this.store.findAll('dog');
-      const nextId = dogs.length > 0 ? Math.max(...dogs.map(dog => parseInt(dog.id))) + 1 : 1;
-
-      const newDog = this.store.createRecord('dog', {
-        id: nextId.toString(),
-        name: this.name,
-        gender: this.gender,
-        breed: this.breed,
-        birthday: this.birthday,
-        weight: this.weight,
-        image: this.image,
-        ownerName: this.ownerName,
-        ownerPhoneNumber: this.ownerPhoneNumber,
-        favoriteToy: this.favoriteToy,
-        microchipID: this.microchipID,
-        vaccinesUpToDate: this.vaccinesUpToDate,
-        spayedNeutered: this.spayedNeutered
-      });
-
-      await newDog.save();
-      this.transitionToRoute('index');
+      await this.model.save();
+      // Handle successful update
     } catch (error) {
-      console.error('Error saving dog:', error);
+      console.error('Error updating dog:', error);
+      // Handle error
     }
   }
 }
+    
+//     try {
+//       // Fetch all existing dogs to determine the next id
+//       const dogs = await this.store.findAll('dog');
+//       const nextId = dogs.length > 0 ? Math.max(...dogs.map(dog => parseInt(dog.id))) + 1 : 1;
+
+//       const newDog = this.store.createRecord('dog', {
+//         id: nextId.toString(),
+//         name: this.name,
+//         gender: this.gender,
+//         breed: this.breed,
+//         birthday: this.birthday,
+//         weight: this.weight,
+//         image: this.image,
+//         ownerName: this.ownerName,
+//         ownerPhoneNumber: this.ownerPhoneNumber,
+//         favoriteToy: this.favoriteToy,
+//         microchipID: this.microchipID,
+//         vaccinesUpToDate: this.vaccinesUpToDate,
+//         spayedNeutered: this.spayedNeutered
+//       });
+
+//       await newDog.save();
+//       this.transitionToRoute('index');
+//     } catch (error) {
+//       console.error('Error saving dog:', error);
+//     }
+//   }
+// }

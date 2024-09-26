@@ -10,4 +10,7 @@ Router.map(function () {});
 Router.map(function () {
   this.route('add-dog');
   this.route('dog', { path: '/dogs/:dog_id' });
+  this.route('dogs', function() {
+    this.route('dog', { path: '/:dog_id' });
+  });
 });

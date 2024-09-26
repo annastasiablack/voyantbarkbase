@@ -40,7 +40,8 @@ export default class DogDetailsComponent extends Component {
   async saveDog(event) {
     event.preventDefault();
     try {
-      await this.args.dog.save();
+      await this.model.save();
+      this.isEditing = false;
     } catch (error) {
       console.error('Error saving dog:', error);
     }

@@ -4,42 +4,44 @@
     <Dog::Image src={{@dog.image}} alt="A picture of {{@dog.title}}" />
 
     <div class="details">
-        <form {{on "submit" this.saveDog}}>
+
         {{#if this.toggleEdit}}
-        <h3>
-            <Input @type="text" @value={{@dog.name}} {{on "input" (this.updateName @dog)}} />
-        </h3>
-        <p>Gender: <Input @type="text" @value={{@dog.gender}} {{on "input" (this.updategender @dog)}} /></p>
-        <p>Age: {{age @dog.birthday}}</p>
-        <p>
-            Birthday:
-            <Input @type="date" @value={{@dog.birthday}} {{on "input" (this.updateBirthday @dog)}} />
-        </p>
+        <form {{on "submit" this.saveDog}}>
+            <h3>
+                <Input @type="text" @value={{@dog.name}} {{on "input" (this.updateName @dog)}} />
+            </h3>
+            <p>Gender: <Input @type="text" @value={{@dog.gender}} {{on "input" (this.updategender @dog)}} /></p>
+            <p>Age: {{age @dog.birthday}}</p>
+            <p>Birthday:
+                <Input @type="date" @value={{@dog.birthday}} {{on "input" (this.updateBirthday @dog)}} />
+            </p>
 
-        <p>Weight: 
-            <Input @type="text" @value={{@dog.weight}} {{on "input" (this.updateWeight @dog)}} />
-        </p>
-        <p>Favorite Toy:
-            <Input @type="text" @value={{@dog.favoriteToy}} {{on "input" (this.updateFavoriteToy @dog)}} />
-        </p>
+            <p>Weight:
+                <Input @type="text" @value={{@dog.weight}} {{on "input" (this.updateWeight @dog)}} />
+            </p>
+            <p>Favorite Toy:
+                <Input @type="text" @value={{@dog.favoriteToy}} {{on "input" (this.updateFavoriteToy @dog)}} />
+            </p>
 
-        <div class="detail owner">
-            <span>Owner:</span> 
+            <div class="detail owner">
+                <span>Owner:</span>
                 <Input @type="text" @value={{@dog.ownerName}} {{on "input" (this.updateOwnerName @dog)}} />
-            <br>
-            <span>Phone Number:</span> 
-                <Input @type="text" @value={{@dog.ownerPhoneNumber}} {{on "input" (this.updateOwnerPhoneNumber @dog)}} />
-        </div>
-        <div class="detail medical">
-            <span>Microship ID:</span> 
+                <br>
+                <span>Phone Number:</span>
+                <Input @type="text" @value={{@dog.ownerPhoneNumber}} {{on "input" (this.updateOwnerPhoneNumber
+                    @dog)}} />
+            </div>
+            <div class="detail medical">
+                <span>Microchip ID:</span>
                 <Input @type="text" @value={{@dog.microchipID}} {{on "input" (this.updateMicrochipID @dog)}} />
-        </div>
-        <div class="detail vaccine">
-            <span>Vacinations Up To Date:</span> {{@dog.vaccinesUpToDate}}
-        </div>
-        <div class="detail spayNeutar">
-            <span>Spayed/Neutered:</span> {{@dog.spayedNeutered}}
-        </div>
+            </div>
+            <div class="detail vaccine">
+                <span>Vacinations Up To Date:</span> {{@dog.vaccinesUpToDate}}
+            </div>
+            <div class="detail spayNeutar">
+                <span>Spayed/Neutered:</span> {{@dog.spayedNeutered}}
+            </div>
+        </form>
         {{!-- if edit mode --}}
         {{else}}
         <h3>{{@dog.name}}</h3>
@@ -54,7 +56,7 @@
             <span>Phone Number:</span> {{@dog.ownerPhoneNumber}}
         </div>
         <div class="detail medical">
-            <span>Microship ID:</span> {{@dog.microchipID}}
+            <span>Microchip ID:</span> {{@dog.microchipID}}
         </div>
         <div class="detail vaccine">
             <span>Vacinations Up To Date:</span> {{@dog.vaccinesUpToDate}}
@@ -63,19 +65,17 @@
             <span>Spayed/Neutered:</span> {{@dog.spayedNeutered}}
         </div>
         {{/if}}
-
-
-
-        <div>
-            <button type="button" {{on "click" this.toggleEditMode}}>
-                {{if this.toggleEdit "Save" "Edit"}}
-            </button>
-            <BsButton @type="danger" {{on " click" this.deleteDog}}>
-                Delete
-            </BsButton>
-        </div>
-        </form>
     </div>
+
+    <div>
+        <BsButton @type="primary" {{on "click" this.toggleEditMode}}>
+            {{if this.toggleEdit "Save" "Edit"}}
+        </BsButton>
+        {{!-- <BsButton @type="danger" {{on " click" this.deleteDog}}>
+            Delete
+        </BsButton> --}}
+    </div>
+
 
 
 </article>
